@@ -6,7 +6,11 @@ import "./Team.css";
 import Evan from "../../../img/teams/Evan.jpeg";
 import Frederick from "../../../img/teams/frederick.png";
 import Stanley from "../../../img/teams/stanley.jpeg";
+import Lydia from "../../../img/teams/Lydia.jpeg";
+import Jeffri from "../../../img/teams/Jeffri.jpeg";
+import Jerly from "../../../img/teams/Jerly.jpeg";
 import Radha from "../../../img/teams/Radha.jpeg";
+import Lidia from "../../../img/teams/Lidia.jpeg";
 
 class Team extends Component {
   render() {
@@ -22,9 +26,18 @@ class Team extends Component {
       cssEase: "linear",
       responsive: [
         {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
             dots: true,
@@ -41,7 +54,7 @@ class Team extends Component {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 2,
           },
@@ -57,111 +70,247 @@ class Team extends Component {
     };
     return (
       <Container>
-        <h4 className="text-center mb-4"> Our Team </h4>
+        <h4 className="text-center mb-5"> Our Team </h4>
         <Slider {...settings}>
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src={Evan}
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Evan Charles</Card.Title>
-              <Card.Text>1931137</Card.Text>
-              <Card.Text>Sistem Informasi</Card.Text>
-            </Card.Body>
-          </Card>
+          <div className="d-flex justify-content-center mb-4">
+            <Card className=" teamCard Card-1">
+              <Card.Img variant="top" src={Evan} className="teamImage" />
+              <Card.Body className="teamContent">
+                <h2>
+                  Evan Charles
+                  <br />
+                  <span>1931137</span>
+                </h2>
+                <p>Sistem Informasi</p>
 
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src={Frederick}
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Frederick</Card.Title>
-              <Card.Text>1931163</Card.Text>
-              <Card.Text>Sistem Informasi</Card.Text>
-            </Card.Body>
-          </Card>
+                <ul>
+                  <li>
+                    <a href="https://wa.me/0895627436758" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/evann.ch/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </div>
 
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src={Stanley}
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Stanley Frenovsky Leowardi</Card.Title>
-              <Card.Text>1941234</Card.Text>
-              <Card.Text>Manajemen</Card.Text>
-            </Card.Body>
-          </Card>
+          <div className="d-flex justify-content-center">
+            <Card className=" teamCard Card-2">
+              <Card.Img variant="top" src={Frederick} className="teamImage" />
+              <div className="teamContent">
+                <h2>
+                  Frederick
+                  <br />
+                  <span>1931163</span>
+                </h2>
+                <p>Sistem Informasi</p>
 
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src="{}"
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Lydia Desrita</Card.Title>
-              <Card.Text>1941144</Card.Text>
-              <Card.Text>Manajemen</Card.Text>
-            </Card.Body>
-          </Card>
+                <ul>
+                  <li>
+                    <a href="https://wa.me/085835998805" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/frederick_8x/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Card>
+          </div>
 
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src="{}"
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Jerly Engelina</Card.Title>
-              <Card.Text>1941039</Card.Text>
-              <Card.Text>Manajemen</Card.Text>
-            </Card.Body>
-          </Card>
+          <div className="d-flex justify-content-center">
+            <Card className=" teamCard Card-3">
+              <Card.Img variant="top" src={Stanley} className="teamImage" />
+              <div className="teamContent">
+                <h2>
+                  Stanley Frenovsky Leowardi
+                  <br />
+                  <span>1941234</span>
+                </h2>
+                <p>Manajemen</p>
 
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src="{}"
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Jeffri Winardy</Card.Title>
-              <Card.Text>1941161</Card.Text>
-              <Card.Text>Manajemen</Card.Text>
-            </Card.Body>
-          </Card>
+                <ul>
+                  <li>
+                    <a href="https://wa.me/089623455283" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/frenovsky/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Card>
+          </div>
 
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src={Radha}
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Radha Purnamasari</Card.Title>
-              <Card.Text>1911026</Card.Text>
-              <Card.Text>Teknik Sipil</Card.Text>
-            </Card.Body>
-          </Card>
+          <div className="d-flex justify-content-center">
+            <Card className=" teamCard Card-1">
+              <Card.Img variant="top" src={Lydia} className="teamImage" />
+              <Card.Body className="teamContent">
+                <h2>
+                  Lydia Desrita
+                  <br />
+                  <span>1941144</span>
+                </h2>
+                <p>Manajemen</p>
 
-          <Card className="mr-3 ml-3 teamCard">
-            <Card.Img
-              variant="top"
-              src="{}"
-              className="teamImage rounded-circle mx-auto"
-            />
-            <Card.Body>
-              <Card.Title>Lidia Bernawati Br Manalu</Card.Title>
-              <Card.Text>1911024</Card.Text>
-              <Card.Text>Teknik Sipil</Card.Text>
-            </Card.Body>
-          </Card>
+                <ul>
+                  <li>
+                    <a href="https://wa.me/089683187715" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/lydiaadesritaa/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </div>
+
+          <div className="d-flex justify-content-center">
+            <Card className=" teamCard Card-2">
+              <Card.Img variant="top" src={Jeffri} className="teamImage " />
+              <Card.Body className="teamContent">
+                <h2>
+                  Jeffri Winardy
+                  <br />
+                  <span>1941161</span>
+                </h2>
+                <p>Manajemen</p>
+
+                <ul>
+                  <li>
+                    <a href="https://wa.me/082383692861" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/jeffriwinardy/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </div>
+
+          <div className="d-flex justify-content-center">
+            <Card className=" teamCard Card-3">
+              <Card.Img variant="top" src={Jerly} className="teamImage " />
+              <Card.Body className="teamContent">
+                <h2>
+                  Jerly Engelina
+                  <br />
+                  <span>1941039</span>
+                </h2>
+                <p>Manajemen</p>
+
+                <ul>
+                  <li>
+                    <a href="https://wa.me/082385809992" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/jrlydng/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </div>
+
+          <div className="d-flex justify-content-center">
+            <Card className=" teamCard Card-1">
+              <Card.Img variant="top" src={Radha} className="teamImage " />
+              <Card.Body className="teamContent">
+                <h2>
+                  Radha Purnamasari
+                  <br />
+                  <span>1911026</span>
+                </h2>
+                <p>Teknik Sipil</p>
+
+                <ul>
+                  <li>
+                    <a href="https://wa.me/08876962275" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/radhasari_/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </div>
+
+          <div className="d-flex justify-content-center">
+            <Card className=" teamCard Card-2">
+              <Card.Img variant="top" src={Lidia} className="teamImage " />
+              <Card.Body className="teamContent">
+                <h2>
+                  Lidia Bernawati Br Manalu
+                  <br />
+                  <span>1911024</span>
+                </h2>
+                <p>Teknik Sipil</p>
+
+                <ul>
+                  <li>
+                    <a href="https://wa.me/081261050546" target="blank">
+                      <i className="fa fa-whatsapp fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/lidiamanalu_05/?hl=id"
+                      target="blank"
+                    >
+                      <i className="fa fa-instagram fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </div>
         </Slider>
       </Container>
     );
