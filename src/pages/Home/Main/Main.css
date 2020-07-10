@@ -1,0 +1,36 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: url(../../../img/banner.png) no-repeat;
+  background-size: contain;
+}
+
+.bannerTop {
+  padding-top: 9rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.bannerText {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.bannerText span {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button.buttonMore {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+.bannerPhoto {
+  width: 20rem;
+}

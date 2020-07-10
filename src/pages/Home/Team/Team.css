@@ -1,0 +1,19 @@
+.teamCard {
+  width: 90% !important;
+  height: 23rem !important;
+  border: 1px solid #c4c4c4;
+  text-align: center;
+}
+
+.teamImage {
+  width: 200px !important;
+  height: 200px !important;
+  margin-top: 20px;
+  border: 1px solid #c4c4c4;
+}
+
+@media (max-width: 480px) {
+  .card.teamCard {
+    margin-left: 2.7rem !important;
+  }
+}

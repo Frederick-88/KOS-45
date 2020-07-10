@@ -1,0 +1,9 @@
+.serviceCard {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 5px 5px -2px grey;
+}
