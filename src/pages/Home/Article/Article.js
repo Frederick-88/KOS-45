@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { useRouteMatch, Link } from "react-router-dom";
 
-let match = useRouteMatch();
-
 class Article extends Component {
   render() {
+    // let match = useRouteMatch();
+
     return (
       <div className="bg-light pt-5 pb-5" style={{ marginTop: "5rem" }}>
         <nav aria-label="breadcrumb">
@@ -41,13 +41,13 @@ class Article extends Component {
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
-                  <Link
-                    to={`${match.path}/page`}
+                  <button
+                    // to={`${match.path}/page`}
                     className="btn btn-outline-danger my-2"
                     style={{ fontSize: "0.85rem" }}
                   >
                     Read more ...
-                  </Link>
+                  </button>
                   <p class="card-text">
                     <small class="text-muted">Last updated 3 mins ago</small>
                   </p>

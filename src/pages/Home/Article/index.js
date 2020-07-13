@@ -1,18 +1,12 @@
 import React, { Component } from "react";
-import {
-  useRouteMatch,
-  Switch,
-  Route,
-  Redirect,
-  NavLink,
-} from "react-router-dom";
+import { useRouteMatch, Switch, Route } from "react-router-dom";
 import MainPage from "./Article";
 import ArticlePage from "./ArticlePage";
 
-let match = useRouteMatch();
-
 class Article extends Component {
   render() {
+    // let match = useRouteMatch();
+
     return (
       <div>
         <Switch>

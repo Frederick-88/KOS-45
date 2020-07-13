@@ -12,7 +12,7 @@ class ArticlePage extends Component {
               </a>
             </li>
             <li class="breadcrumb-item">
-              <a href="/article" className="text-danger">
+              <a href="/#/article" className="text-danger">
                 Article
               </a>
             </li>
@@ -22,12 +22,50 @@ class ArticlePage extends Component {
           </ol>
         </nav>
         <div style={{ margin: "0rem 10rem" }}>
-          <h4 className="mb-4">
-            <span className="text-danger">Title</span> Article
+          <h4 className="mb-4 text-center">
+            <span className="text-danger">
+              Bullying, Penyebab, dan Cara Menghadapinya
+            </span>{" "}
+            Article
           </h4>
 
           <div>
-            <h1>Ini artikel</h1>
+            <div className="d-flex justify-content-center">
+              <img
+                src="https://images.squarespace-cdn.com/content/5475f6eae4b0821160f6ac3e/1569939969068-1MVN6OM2Y8U41T08EYE4/bigstock-Victim-Women-Depressed-Girl-I-260965918.jpg?content-type=image%2Fjpeg"
+                className="w-50"
+                alt="..."
+              />
+            </div>
+            <div className="mt-4">
+              <p>
+                Bullying, sepertinya kita sudah tidak asing dengan kata ini.
+                Kasus bullying atau penindasan ini seperti tidak ada habisnya,
+                masih ingat kasus bully terhadap seorang bocah penjual jalankote
+                di SulSel kemarin ? itu baru secuil dari ratusan bahkan mungkin
+                ribuan kasus bullying yang terjadi.
+              </p>
+              <p>
+                Bullying itu apa sih? Bullying adalah perilaku tidak
+                menyenangkan baik secara verbal, fisik, ataupun sosial di dunia
+                nyata maupun dunia maya.
+              </p>
+              <p>Penyebab bullying bisa menjadi :</p>
+              <p>
+                1. Penampilan fisikPenyebab bullying pertama dan yang paling
+                umum adalah akibat dari penampilan fisik. 2. RasPerbedaan ras
+                juga sering kali menyebabkan seorang terkena bully 3. Orientasi
+                seksualOrientasi seksual seseorang berbeda-beda dan umumnya
+                seorang baru menyadari orientasi seksual yang berbeda saat
+                memasuki usia remaja.
+              </p>
+              <p>
+                Bullying merupakan masalah serius yang perlu diatasi karena
+                dapat memberikan dampak jangka panjang baik untuk korban dan
+                juga pelaku. Mari bersama-sama hentikan perlakuan ini di sekitar
+                kita.
+              </p>
+            </div>
           </div>
         </div>
       </div>

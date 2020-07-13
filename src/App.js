@@ -5,14 +5,16 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home/Main/Main";
-import ArticlePage from "./pages/Home/Article/Article";
+import ArticleMainPage from "./pages/Home/Article/Article";
+import ArticlePage from "./pages/Home/Article/ArticlePage";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/article" component={ArticlePage} />
+        <Route path="/article/page" component={ArticlePage} />
+        <Route path="/article" component={ArticleMainPage} />
         <Route exact path="/" component={Home} />
       </Switch>
       <Footer />
