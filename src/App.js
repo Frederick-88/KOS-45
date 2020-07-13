@@ -5,13 +5,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home/Main/Main";
+import ArticlePage from "./pages/Home/Article/Article";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/" component={Home} />
+        <Route path="/article" component={ArticlePage} />
+        <Route exact path="/" component={Home} />
       </Switch>
       <Footer />
     </Router>
