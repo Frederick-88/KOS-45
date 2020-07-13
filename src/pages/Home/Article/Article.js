@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { useRouteMatch, Link } from "react-router-dom";
 
-const text = "ini adalah text";
+let match = useRouteMatch();
+
 class Article extends Component {
   render() {
     return (
@@ -34,11 +36,18 @@ class Article extends Component {
               <div class="col-md-8">
                 <div class="card-body my-auto">
                   <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                  <p class="card-text my-0">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
+                  <Link
+                    to={`${match.path}/page`}
+                    className="btn btn-outline-danger my-2"
+                    style={{ fontSize: "0.85rem" }}
+                  >
+                    Read more ...
+                  </Link>
                   <p class="card-text">
                     <small class="text-muted">Last updated 3 mins ago</small>
                   </p>
@@ -59,11 +68,17 @@ class Article extends Component {
               <div class="col-md-8">
                 <div class="card-body my-auto">
                   <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                  <p class="card-text my-0">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
+                  <button
+                    className="btn btn-outline-danger my-2"
+                    style={{ fontSize: "0.85rem" }}
+                  >
+                    Read more ...
+                  </button>
                   <p class="card-text">
                     <small class="text-muted">Last updated 3 mins ago</small>
                   </p>
