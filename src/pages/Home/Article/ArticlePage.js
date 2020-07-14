@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class ArticlePage extends Component {
   render() {
     return (
-      <div className="bg-light pt-5 pb-5" style={{ marginTop: "5rem" }}>
+      <div className="bg-light pt-4 pb-5" style={{ marginTop: "5rem" }}>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb d-flex justify-content-center">
             <li class="breadcrumb-item">
