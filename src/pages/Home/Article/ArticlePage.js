@@ -1,6 +1,24 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class ArticlePage extends Component {
+  constructor(props) {
+    super(props);
+    // = this.state.data = data:[]
+    this.state = {
+      data: [],
+    };
+  }
+  async componentDidMount() {
+    try {
+      const response = await axios.get(
+        `http://localhost:8000/article/getarticle/`
+      );
+      this.setState({ data: response.data });
+    } catch (error) {
+      console.log(error);
+    }
+  }
   render() {
     return (
       <div className="bg-light pt-4 pb-5" style={{ marginTop: "5rem" }}>
