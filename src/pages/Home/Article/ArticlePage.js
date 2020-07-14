@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
 
 class ArticlePage extends Component {
@@ -10,9 +11,11 @@ class ArticlePage extends Component {
     };
   }
   async componentDidMount() {
+    const idArticle = this.props.match.params.id;
+
     try {
       const response = await axios.get(
-        `http://localhost:8000/article/getarticle/`
+        `http://localhost:8000/article/getarticle/${idArticle}`
       );
       this.setState({ data: response.data });
     } catch (error) {
@@ -20,6 +23,18 @@ class ArticlePage extends Component {
     }
   }
   render() {
+    const picture = (image) => {
+      return {
+        backgroundImage: `url(http://localhost:8000/${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "15rem",
+      };
+    };
+    console.log(this.state.data);
+    console.log(this.state.data.data);
+    let { data } = this.state.data;
+
     return (
       <div className="bg-light pt-4 pb-5" style={{ marginTop: "5rem" }}>
         <nav aria-label="breadcrumb">
@@ -39,55 +54,31 @@ class ArticlePage extends Component {
             </li>
           </ol>
         </nav>
-        <div style={{ margin: "0rem 10rem" }}>
-          <h4 className="mb-4 text-center">
-            <span className="text-danger">
-              Bullying, Penyebab, dan Cara Menghadapinya
-            </span>{" "}
-            Article
-          </h4>
+        {this.state.data.status === "success" ? (
+          <div style={{ margin: "0rem 10rem" }}>
+            <h4 className="mb-4 text-center">
+              <span className="text-danger mr-2">{data.title}</span>
+              Article
+            </h4>
 
-          <div>
-            <div className="d-flex justify-content-center">
-              <img
-                src="https://images.squarespace-cdn.com/content/5475f6eae4b0821160f6ac3e/1569939969068-1MVN6OM2Y8U41T08EYE4/bigstock-Victim-Women-Depressed-Girl-I-260965918.jpg?content-type=image%2Fjpeg"
-                className="w-50"
-                alt="..."
-              />
-            </div>
-            <div className="mt-4">
-              <p>
-                Bullying, sepertinya kita sudah tidak asing dengan kata ini.
-                Kasus bullying atau penindasan ini seperti tidak ada habisnya,
-                masih ingat kasus bully terhadap seorang bocah penjual jalankote
-                di SulSel kemarin ? itu baru secuil dari ratusan bahkan mungkin
-                ribuan kasus bullying yang terjadi.
-              </p>
-              <p>
-                Bullying itu apa sih? Bullying adalah perilaku tidak
-                menyenangkan baik secara verbal, fisik, ataupun sosial di dunia
-                nyata maupun dunia maya.
-              </p>
-              <p>Penyebab bullying bisa menjadi :</p>
-              <p>
-                1. Penampilan fisikPenyebab bullying pertama dan yang paling
-                umum adalah akibat dari penampilan fisik. 2. RasPerbedaan ras
-                juga sering kali menyebabkan seorang terkena bully 3. Orientasi
-                seksualOrientasi seksual seseorang berbeda-beda dan umumnya
-                seorang baru menyadari orientasi seksual yang berbeda saat
-                memasuki usia remaja.
-              </p>
-              <p>
-                Bullying merupakan masalah serius yang perlu diatasi karena
-                dapat memberikan dampak jangka panjang baik untuk korban dan
-                juga pelaku. Mari bersama-sama hentikan perlakuan ini di sekitar
-                kita.
-              </p>
+            <div>
+              <div className="d-flex justify-content-center">
+                <div className="w-50" style={picture(data.image)} />
+              </div>
+              <div className="mt-4">
+                <p>{data.paragraph1}</p>
+                <p>{data.paragraph2}</p>
+                <p>{data.paragraph3}</p>
+                <p>{data.paragraph4}</p>
+                <p>{data.paragraph5}</p>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
       </div>
     );
   }
 }
-export default ArticlePage;
+export default withRouter(ArticlePage);
