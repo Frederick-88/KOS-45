@@ -69,10 +69,10 @@ class Team extends Component {
       ],
     };
     return (
-      <Container className="teamSection">
+      <Container>
         <h4 className="text-center mb-5"> Our Team </h4>
         <Slider {...settings}>
-          <div className="d-flex justify-content-center mb-4">
+          <div className="d-flex inline-block justify-content-center mb-4">
             <Card className=" teamCard Card-1">
               <Card.Img variant="top" src={Evan} className="teamImage" />
               <Card.Body className="teamContent">
