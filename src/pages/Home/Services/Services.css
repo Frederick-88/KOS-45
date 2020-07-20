@@ -1,9 +1,15 @@
 .serviceCard {
-    display: flex !important;
-    justify-content: center !important;
-    text-align: center;
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.serviceCard:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
 }
 
 .card:hover {
-    box-shadow: 0 5px 5px -2px grey;
+  box-shadow: 0 5px 5px -2px grey;
 }

@@ -1,10 +1,14 @@
 * {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 body {
-  background: url(../../../img/banner.png) no-repeat;
   background-size: contain;
+}
+
+.main-background {
+  background: url(../../../img/banner.png) no-repeat;
 }
 
 .bannerTop {

@@ -15,7 +15,7 @@ import Lidia from "../../../img/teams/Lidia.jpeg";
 class Team extends Component {
   render() {
     var settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
@@ -69,7 +69,7 @@ class Team extends Component {
       ],
     };
     return (
-      <Container>
+      <Container className="teamSection">
         <h4 className="text-center mb-5"> Our Team </h4>
         <Slider {...settings}>
           <div className="d-flex justify-content-center mb-4">

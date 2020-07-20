@@ -9,9 +9,11 @@ class navbar extends Component {
   render() {
     return (
       <Navbar bg="danger" variant="dark" expand="lg" fixed="top">
-        <Navbar.Brand to="#" className="navbarNav ml-3">
-          <img src={logoBrand} alt="logoBrand" className="logoBrand" />
-        </Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand className="navbarNav ml-3">
+            <img src={logoBrand} alt="logoBrand" className="logoBrand" />
+          </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto mr-4">
@@ -21,12 +23,12 @@ class navbar extends Component {
             <Link to="/article" className="navbarNav">
               Article
             </Link>
-            <Link to="#" className="navbarNav">
+            <a href="##about" className="navbarNav">
               About
-            </Link>
-            <Link to="#" className="navbarNav">
+            </a>
+            <a href="##contact" className="navbarNav">
               Contact
-            </Link>
+            </a>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

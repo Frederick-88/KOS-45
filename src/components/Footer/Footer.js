@@ -6,7 +6,7 @@ import "./Footer.css";
 class Footer extends Component {
   render() {
     return (
-      <div className="bg-danger text-white text-center">
+      <div className="bg-danger text-white text-center" id="#contact">
         <Container>
           <Row className="mt-5 pt-5 pb-5">
             <Col lg={4} md={12} sm={12} className="footerSection">
@@ -20,24 +20,24 @@ class Footer extends Component {
             <Col lg={4} md={12} sm={12} className="mt-5">
               <ul className="list-inline">
                 <li>
-                  <Link to="#" className="footerNav">
+                  <Link to="/" className="footerNav">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="footerNav">
+                  <Link to="/article" className="footerNav">
                     Article
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="footerNav">
+                  <a href="##about" className="footerNav">
                     About
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="#" className="footerNav">
+                  <a href="##contact" className="footerNav">
                     Contact
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </Col>
