@@ -25,7 +25,7 @@ class ArticlePage extends Component {
   render() {
     const picture = (image) => {
       return {
-        backgroundImage: `url(http://localhost:8000/${image})`,
+        backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "15rem",
