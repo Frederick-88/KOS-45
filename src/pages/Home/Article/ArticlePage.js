@@ -15,7 +15,7 @@ class ArticlePage extends Component {
 
     try {
       const response = await axios.get(
-        `http://localhost:8000/article/getarticle/${idArticle}`
+        `https://kos45-backend.herokuapp.com/article/getarticle/${idArticle}`
       );
       this.setState({ data: response.data });
     } catch (error) {

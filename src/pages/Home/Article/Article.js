@@ -16,7 +16,7 @@ class Article extends Component {
   async componentDidMount() {
     try {
       const response = await axios.get(
-        "http://localhost:8000/article/getarticle"
+        "https://kos45-backend.herokuapp.com/article/getarticle"
       );
       this.setState({ data: response.data });
       Aos.init({ duration: 1500, disable: false });
