@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./Article.css";
 
 class Article extends Component {
@@ -17,6 +19,7 @@ class Article extends Component {
         "http://localhost:8000/article/getarticle"
       );
       this.setState({ data: response.data });
+      Aos.init({ duration: 1500, disable: false });
     } catch (error) {
       console.log(error);
     }
@@ -44,7 +47,7 @@ class Article extends Component {
             </li>
           </ol>
         </nav>
-        <div style={{ margin: "0rem 10rem" }}>
+        <div className="article-page-container">
           <h4 className="mb-4 mt-4">
             Articles tentang <span className="text-danger">Bullying</span>
           </h4>
@@ -52,7 +55,13 @@ class Article extends Component {
           {this.state.data.length !== 0
             ? this.state.data.data.map((item, index) => {
                 return (
-                  <div class="card mb-4" key={index}>
+                  <div
+                    data-aos="fade-right"
+                    // menghentikan efek kalau scroll keatas hilang efek animasinya
+                    data-aos-anchor-placement="top"
+                    class="card mb-4"
+                    key={index}
+                  >
                     <div class="row no-gutters">
                       <div class="col-md-4">
                         <div style={picture(item.image)} />
@@ -68,11 +77,6 @@ class Article extends Component {
                           >
                             Read more ...
                           </Link>
-                          <p class="card-text">
-                            <small class="text-muted">
-                              Last updated 3 mins ago
-                            </small>
-                          </p>
                         </div>
                       </div>
                     </div>

@@ -28,7 +28,7 @@ class ArticlePage extends Component {
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "15rem",
+        height: "20rem",
       };
     };
     console.log(this.state.data);
@@ -55,7 +55,7 @@ class ArticlePage extends Component {
           </ol>
         </nav>
         {this.state.data.status === "success" ? (
-          <div style={{ margin: "0rem 10rem" }}>
+          <div className="article-page-container">
             <h4 className="mb-4 text-center">
               <span className="text-danger mr-2">{data.title}</span>
               Article
@@ -63,7 +63,7 @@ class ArticlePage extends Component {
 
             <div>
               <div className="d-flex justify-content-center">
-                <div className="w-50" style={picture(data.image)} />
+                <div className="article-page-img" style={picture(data.image)} />
               </div>
               <div className="mt-4">
                 <p>{data.paragraph1}</p>

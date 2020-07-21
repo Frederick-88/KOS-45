@@ -5,3 +5,18 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.article-page-container {
+  margin: 0rem 10rem;
+}
+.article-page-img {
+  width: 50%;
+}
+
+@media (max-width: 575.98px) {
+  .article-page-container {
+    margin: 0rem 2rem;
+  }
+  .article-page-img {
+    width: 85%;
+  }
+}
