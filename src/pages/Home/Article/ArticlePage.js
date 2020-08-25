@@ -31,7 +31,6 @@ class ArticlePage extends Component {
         height: "20rem",
       };
     };
-    console.log(this.state.data);
     let { data } = this.state.data;
 
     return (
