@@ -32,7 +32,6 @@ class ArticlePage extends Component {
       };
     };
     console.log(this.state.data);
-    console.log(this.state.data.data);
     let { data } = this.state.data;
 
     return (
