@@ -39,7 +39,7 @@ class ArticlePage extends Component {
           <ol class="breadcrumb d-flex justify-content-center">
             <li class="breadcrumb-item">
               <a href="/" className="text-danger">
-                Homaae
+                Home
               </a>
             </li>
             <li class="breadcrumb-item">
