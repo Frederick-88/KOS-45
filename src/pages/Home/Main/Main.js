@@ -26,12 +26,12 @@ const Main = () => {
         <Row>
           <Col lg={6} md={6} sm={12}>
             <p className="text-white mt-5 bannerText">
-              <span>Bullying</span> adalah tindakan atau perilaku yang dilakukan
-              untuk menyakiti baik dalam bentuk verbal, psikologis atau
-              emosional serta bisa juga dalam bentuk fisik. Tindakan bullying
-              ini bisa dilakukan oleh sekelompok orang maupun perorangan yang
-              merasa lebih kuat secara fisik dan mental bila dibandingkan
-              korban.
+              <span>Bullying</span> adalah tindakan atau perilaaku yang
+              dilakukan untuk menyakiti baik dalam bentuk verbal, psikologis
+              atau emosional serta bisa juga dalam bentuk fisik. Tindakan
+              bullying ini bisa dilakukan oleh sekelompok orang maupun
+              perorangan yang merasa lebih kuat secara fisik dan mental bila
+              dibandingkan korban.
             </p>
           </Col>
           <Col lg={6} md={6} sm={12} className="text-center">
